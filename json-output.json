@@ -1,0 +1,570 @@
+{
+  "format_version": "1.2",
+  "terraform_version": "1.8.3",
+  "variables": {
+    "aws_region": {
+      "value": "ap-southeast-1"
+    },
+    "tfc_aws_dynamic_credentials": {
+      "value": {
+        "aliases": {
+          "ALIAS1": {
+            "shared_config_file": "/home/tfc-agent/.tfc-agent/component/terraform/runs/run-xxxx/ALIAS1-tfc-aws-shared-config"
+          }
+        },
+        "default": {
+          "shared_config_file": "/home/tfc-agent/.tfc-agent/component/terraform/runs/run-xxxx/tfc-aws-shared-config"
+        }
+      }
+    }
+  },
+  "planned_values": {
+    "root_module": {
+      "child_modules": [
+        {
+          "resources": [
+            {
+              "address": "module.vpc.aws_vpc.main",
+              "mode": "managed",
+              "type": "aws_vpc",
+              "name": "main",
+              "provider_name": "registry.terraform.io/hashicorp/aws",
+              "schema_version": 1,
+              "values": {
+                "arn": "arn:aws:ec2:ap-southeast-1:012345678910:vpc/vpc-xxxx",
+                "assign_generated_ipv6_cidr_block": false,
+                "cidr_block": "10.0.0.0/16",
+                "default_network_acl_id": "acl-xxx",
+                "default_route_table_id": "rtb-xxxx",
+                "default_security_group_id": "sg-xxxx",
+                "dhcp_options_id": "dopt-xxxx",
+                "enable_dns_hostnames": false,
+                "enable_dns_support": true,
+                "enable_network_address_usage_metrics": false,
+                "id": "vpc-xxxx",
+                "instance_tenancy": "default",
+                "ipv4_ipam_pool_id": null,
+                "ipv4_netmask_length": null,
+                "ipv6_association_id": "",
+                "ipv6_cidr_block": "",
+                "ipv6_cidr_block_network_border_group": "",
+                "ipv6_ipam_pool_id": "",
+                "ipv6_netmask_length": 0,
+                "main_route_table_id": "rtb-xxxx",
+                "owner_id": "012345678910",
+                "tags": {},
+                "tags_all": {}
+              },
+              "sensitive_values": {
+                "tags": {},
+                "tags_all": {}
+              }
+            }
+          ],
+          "address": "module.vpc"
+        },
+        {
+          "resources": [
+            {
+              "address": "module.vpc2.aws_vpc.main",
+              "mode": "managed",
+              "type": "aws_vpc",
+              "name": "main",
+              "provider_name": "registry.terraform.io/hashicorp/aws",
+              "schema_version": 1,
+              "values": {
+                "arn": "arn:aws:ec2:ap-southeast-1:012345678910:vpc/vpc-xxxx",
+                "assign_generated_ipv6_cidr_block": false,
+                "cidr_block": "10.0.0.0/16",
+                "default_network_acl_id": "acl-xxxx",
+                "default_route_table_id": "rtb-xxxx",
+                "default_security_group_id": "sg-xxxx",
+                "dhcp_options_id": "dopt-xxxx",
+                "enable_dns_hostnames": false,
+                "enable_dns_support": true,
+                "enable_network_address_usage_metrics": false,
+                "id": "vpc-xxxx",
+                "instance_tenancy": "default",
+                "ipv4_ipam_pool_id": null,
+                "ipv4_netmask_length": null,
+                "ipv6_association_id": "",
+                "ipv6_cidr_block": "",
+                "ipv6_cidr_block_network_border_group": "",
+                "ipv6_ipam_pool_id": "",
+                "ipv6_netmask_length": 0,
+                "main_route_table_id": "rtb-xxxx",
+                "owner_id": "012345678910",
+                "tags": {},
+                "tags_all": {}
+              },
+              "sensitive_values": {
+                "tags": {},
+                "tags_all": {}
+              }
+            }
+          ],
+          "address": "module.vpc2"
+        }
+      ]
+    }
+  },
+  "resource_drift": [
+    {
+      "address": "module.vpc2.aws_vpc.main",
+      "module_address": "module.vpc2",
+      "mode": "managed",
+      "type": "aws_vpc",
+      "name": "main",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "update"
+        ],
+        "before": {
+          "arn": "arn:aws:ec2:ap-southeast-1:012345678910:vpc/vpc-xxxx",
+          "assign_generated_ipv6_cidr_block": false,
+          "cidr_block": "10.0.0.0/16",
+          "default_network_acl_id": "acl-xxxx",
+          "default_route_table_id": "rtb-xxxx",
+          "default_security_group_id": "sg-xxxx",
+          "dhcp_options_id": "dopt-xxxx",
+          "enable_dns_hostnames": false,
+          "enable_dns_support": true,
+          "enable_network_address_usage_metrics": false,
+          "id": "vpc-xxxx",
+          "instance_tenancy": "default",
+          "ipv4_ipam_pool_id": null,
+          "ipv4_netmask_length": null,
+          "ipv6_association_id": "",
+          "ipv6_cidr_block": "",
+          "ipv6_cidr_block_network_border_group": "",
+          "ipv6_ipam_pool_id": "",
+          "ipv6_netmask_length": 0,
+          "main_route_table_id": "rtb-xxxx",
+          "owner_id": "012345678910",
+          "tags": null,
+          "tags_all": {}
+        },
+        "after": {
+          "arn": "arn:aws:ec2:ap-southeast-1:012345678910:vpc/vpc-xxxx",
+          "assign_generated_ipv6_cidr_block": false,
+          "cidr_block": "10.0.0.0/16",
+          "default_network_acl_id": "acl-xxxx",
+          "default_route_table_id": "rtb-xxxx",
+          "default_security_group_id": "sg-xxxx",
+          "dhcp_options_id": "dopt-xxxx",
+          "enable_dns_hostnames": false,
+          "enable_dns_support": true,
+          "enable_network_address_usage_metrics": false,
+          "id": "vpc-xxxx",
+          "instance_tenancy": "default",
+          "ipv4_ipam_pool_id": null,
+          "ipv4_netmask_length": null,
+          "ipv6_association_id": "",
+          "ipv6_cidr_block": "",
+          "ipv6_cidr_block_network_border_group": "",
+          "ipv6_ipam_pool_id": "",
+          "ipv6_netmask_length": 0,
+          "main_route_table_id": "rtb-xxxx",
+          "owner_id": "012345678910",
+          "tags": {},
+          "tags_all": {}
+        },
+        "after_unknown": {},
+        "before_sensitive": {
+          "tags_all": {}
+        },
+        "after_sensitive": {
+          "tags": {},
+          "tags_all": {}
+        }
+      }
+    }
+  ],
+  "resource_changes": [
+    {
+      "address": "module.vpc.aws_vpc.main",
+      "module_address": "module.vpc",
+      "mode": "managed",
+      "type": "aws_vpc",
+      "name": "main",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": {
+          "arn": "arn:aws:ec2:ap-southeast-1:012345678910:vpc/vpc-xxxx",
+          "assign_generated_ipv6_cidr_block": false,
+          "cidr_block": "10.0.0.0/16",
+          "default_network_acl_id": "acl-xxx",
+          "default_route_table_id": "rtb-xxxx",
+          "default_security_group_id": "sg-xxxx",
+          "dhcp_options_id": "dopt-xxxx",
+          "enable_dns_hostnames": false,
+          "enable_dns_support": true,
+          "enable_network_address_usage_metrics": false,
+          "id": "vpc-xxxx",
+          "instance_tenancy": "default",
+          "ipv4_ipam_pool_id": null,
+          "ipv4_netmask_length": null,
+          "ipv6_association_id": "",
+          "ipv6_cidr_block": "",
+          "ipv6_cidr_block_network_border_group": "",
+          "ipv6_ipam_pool_id": "",
+          "ipv6_netmask_length": 0,
+          "main_route_table_id": "rtb-xxxx",
+          "owner_id": "012345678910",
+          "tags": {},
+          "tags_all": {}
+        },
+        "after": {
+          "arn": "arn:aws:ec2:ap-southeast-1:012345678910:vpc/vpc-xxxx",
+          "assign_generated_ipv6_cidr_block": false,
+          "cidr_block": "10.0.0.0/16",
+          "default_network_acl_id": "acl-xxx",
+          "default_route_table_id": "rtb-xxxx",
+          "default_security_group_id": "sg-xxxx",
+          "dhcp_options_id": "dopt-xxxx",
+          "enable_dns_hostnames": false,
+          "enable_dns_support": true,
+          "enable_network_address_usage_metrics": false,
+          "id": "vpc-xxxx",
+          "instance_tenancy": "default",
+          "ipv4_ipam_pool_id": null,
+          "ipv4_netmask_length": null,
+          "ipv6_association_id": "",
+          "ipv6_cidr_block": "",
+          "ipv6_cidr_block_network_border_group": "",
+          "ipv6_ipam_pool_id": "",
+          "ipv6_netmask_length": 0,
+          "main_route_table_id": "rtb-xxxx",
+          "owner_id": "012345678910",
+          "tags": {},
+          "tags_all": {}
+        },
+        "after_unknown": {},
+        "before_sensitive": {
+          "tags": {},
+          "tags_all": {}
+        },
+        "after_sensitive": {
+          "tags": {},
+          "tags_all": {}
+        }
+      }
+    },
+    {
+      "address": "module.vpc2.aws_vpc.main",
+      "module_address": "module.vpc2",
+      "mode": "managed",
+      "type": "aws_vpc",
+      "name": "main",
+      "provider_name": "registry.terraform.io/hashicorp/aws",
+      "change": {
+        "actions": [
+          "no-op"
+        ],
+        "before": {
+          "arn": "arn:aws:ec2:ap-southeast-1:012345678910:vpc/vpc-xxxx",
+          "assign_generated_ipv6_cidr_block": false,
+          "cidr_block": "10.0.0.0/16",
+          "default_network_acl_id": "acl-xxxx",
+          "default_route_table_id": "rtb-xxxx",
+          "default_security_group_id": "sg-xxxx",
+          "dhcp_options_id": "dopt-xxxx",
+          "enable_dns_hostnames": false,
+          "enable_dns_support": true,
+          "enable_network_address_usage_metrics": false,
+          "id": "vpc-xxxx",
+          "instance_tenancy": "default",
+          "ipv4_ipam_pool_id": null,
+          "ipv4_netmask_length": null,
+          "ipv6_association_id": "",
+          "ipv6_cidr_block": "",
+          "ipv6_cidr_block_network_border_group": "",
+          "ipv6_ipam_pool_id": "",
+          "ipv6_netmask_length": 0,
+          "main_route_table_id": "rtb-xxxx",
+          "owner_id": "012345678910",
+          "tags": {},
+          "tags_all": {}
+        },
+        "after": {
+          "arn": "arn:aws:ec2:ap-southeast-1:012345678910:vpc/vpc-xxxx",
+          "assign_generated_ipv6_cidr_block": false,
+          "cidr_block": "10.0.0.0/16",
+          "default_network_acl_id": "acl-xxxx",
+          "default_route_table_id": "rtb-xxxx",
+          "default_security_group_id": "sg-xxxx",
+          "dhcp_options_id": "dopt-xxxx",
+          "enable_dns_hostnames": false,
+          "enable_dns_support": true,
+          "enable_network_address_usage_metrics": false,
+          "id": "vpc-xxxx",
+          "instance_tenancy": "default",
+          "ipv4_ipam_pool_id": null,
+          "ipv4_netmask_length": null,
+          "ipv6_association_id": "",
+          "ipv6_cidr_block": "",
+          "ipv6_cidr_block_network_border_group": "",
+          "ipv6_ipam_pool_id": "",
+          "ipv6_netmask_length": 0,
+          "main_route_table_id": "rtb-xxxx",
+          "owner_id": "012345678910",
+          "tags": {},
+          "tags_all": {}
+        },
+        "after_unknown": {},
+        "before_sensitive": {
+          "tags": {},
+          "tags_all": {}
+        },
+        "after_sensitive": {
+          "tags": {},
+          "tags_all": {}
+        }
+      }
+    }
+  ],
+  "prior_state": {
+    "format_version": "1.0",
+    "terraform_version": "1.8.3",
+    "values": {
+      "root_module": {
+        "child_modules": [
+          {
+            "resources": [
+              {
+                "address": "module.vpc.aws_vpc.main",
+                "mode": "managed",
+                "type": "aws_vpc",
+                "name": "main",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "schema_version": 1,
+                "values": {
+                  "arn": "arn:aws:ec2:ap-southeast-1:012345678910:vpc/vpc-xxxx",
+                  "assign_generated_ipv6_cidr_block": false,
+                  "cidr_block": "10.0.0.0/16",
+                  "default_network_acl_id": "acl-xxx",
+                  "default_route_table_id": "rtb-xxxx",
+                  "default_security_group_id": "sg-xxxx",
+                  "dhcp_options_id": "dopt-xxxx",
+                  "enable_dns_hostnames": false,
+                  "enable_dns_support": true,
+                  "enable_network_address_usage_metrics": false,
+                  "id": "vpc-xxxx",
+                  "instance_tenancy": "default",
+                  "ipv4_ipam_pool_id": null,
+                  "ipv4_netmask_length": null,
+                  "ipv6_association_id": "",
+                  "ipv6_cidr_block": "",
+                  "ipv6_cidr_block_network_border_group": "",
+                  "ipv6_ipam_pool_id": "",
+                  "ipv6_netmask_length": 0,
+                  "main_route_table_id": "rtb-xxxx",
+                  "owner_id": "012345678910",
+                  "tags": {},
+                  "tags_all": {}
+                },
+                "sensitive_values": {
+                  "tags": {},
+                  "tags_all": {}
+                }
+              }
+            ],
+            "address": "module.vpc"
+          },
+          {
+            "resources": [
+              {
+                "address": "module.vpc2.aws_vpc.main",
+                "mode": "managed",
+                "type": "aws_vpc",
+                "name": "main",
+                "provider_name": "registry.terraform.io/hashicorp/aws",
+                "schema_version": 1,
+                "values": {
+                  "arn": "arn:aws:ec2:ap-southeast-1:012345678910:vpc/vpc-xxxx",
+                  "assign_generated_ipv6_cidr_block": false,
+                  "cidr_block": "10.0.0.0/16",
+                  "default_network_acl_id": "acl-xxxx",
+                  "default_route_table_id": "rtb-xxxx",
+                  "default_security_group_id": "sg-xxxx",
+                  "dhcp_options_id": "dopt-xxxx",
+                  "enable_dns_hostnames": false,
+                  "enable_dns_support": true,
+                  "enable_network_address_usage_metrics": false,
+                  "id": "vpc-xxxx",
+                  "instance_tenancy": "default",
+                  "ipv4_ipam_pool_id": null,
+                  "ipv4_netmask_length": null,
+                  "ipv6_association_id": "",
+                  "ipv6_cidr_block": "",
+                  "ipv6_cidr_block_network_border_group": "",
+                  "ipv6_ipam_pool_id": "",
+                  "ipv6_netmask_length": 0,
+                  "main_route_table_id": "rtb-xxxx",
+                  "owner_id": "012345678910",
+                  "tags": {},
+                  "tags_all": {}
+                },
+                "sensitive_values": {
+                  "tags": {},
+                  "tags_all": {}
+                }
+              }
+            ],
+            "address": "module.vpc2"
+          }
+        ]
+      }
+    }
+  },
+  "configuration": {
+    "provider_config": {
+      "aws": {
+        "name": "aws",
+        "full_name": "registry.terraform.io/hashicorp/aws",
+        "version_constraint": "\u003e= 5.50.0",
+        "expressions": {
+          "region": {
+            "constant_value": "ap-southeast-1"
+          },
+          "shared_config_files": {
+            "references": [
+              "var.tfc_aws_dynamic_credentials.default.shared_config_file",
+              "var.tfc_aws_dynamic_credentials.default",
+              "var.tfc_aws_dynamic_credentials"
+            ]
+          }
+        }
+      },
+      "aws.ALIAS1": {
+        "name": "aws",
+        "full_name": "registry.terraform.io/hashicorp/aws",
+        "alias": "ALIAS1",
+        "version_constraint": "\u003e= 5.50.0",
+        "expressions": {
+          "region": {
+            "constant_value": "ap-southeast-1"
+          },
+          "shared_config_files": {
+            "references": [
+              "var.tfc_aws_dynamic_credentials.aliases[\"ALIAS1\"].shared_config_file",
+              "var.tfc_aws_dynamic_credentials.aliases[\"ALIAS1\"]",
+              "var.tfc_aws_dynamic_credentials.aliases",
+              "var.tfc_aws_dynamic_credentials"
+            ]
+          }
+        }
+      }
+    },
+    "root_module": {
+      "module_calls": {
+        "vpc": {
+          "source": "app.terraform.io/kieranyio/vpc/aws",
+          "module": {
+            "outputs": {
+              "id": {
+                "expression": {
+                  "references": [
+                    "aws_vpc.main.id",
+                    "aws_vpc.main"
+                  ]
+                }
+              }
+            },
+            "resources": [
+              {
+                "address": "aws_vpc.main",
+                "mode": "managed",
+                "type": "aws_vpc",
+                "name": "main",
+                "provider_config_key": "aws",
+                "expressions": {
+                  "cidr_block": {
+                    "references": [
+                      "var.cidr_block"
+                    ]
+                  }
+                },
+                "schema_version": 1
+              }
+            ],
+            "variables": {
+              "cidr_block": {
+                "default": "10.0.0.0/16"
+              }
+            }
+          },
+          "version_constraint": "0.0.4"
+        },
+        "vpc2": {
+          "source": "app.terraform.io/kieranyio/vpc/aws",
+          "module": {
+            "outputs": {
+              "id": {
+                "expression": {
+                  "references": [
+                    "aws_vpc.main.id",
+                    "aws_vpc.main"
+                  ]
+                }
+              }
+            },
+            "resources": [
+              {
+                "address": "aws_vpc.main",
+                "mode": "managed",
+                "type": "aws_vpc",
+                "name": "main",
+                "provider_config_key": "aws.ALIAS1",
+                "expressions": {
+                  "cidr_block": {
+                    "references": [
+                      "var.cidr_block"
+                    ]
+                  }
+                },
+                "schema_version": 1
+              }
+            ],
+            "variables": {
+              "cidr_block": {
+                "default": "10.0.0.0/16"
+              }
+            }
+          },
+          "version_constraint": "0.0.4"
+        }
+      },
+      "variables": {
+        "aws_region": {
+          "default": "ap-southeast-1"
+        },
+        "tfc_aws_dynamic_credentials": {
+          "description": "Object containing AWS dynamic credentials configuration"
+        }
+      }
+    }
+  },
+  "relevant_attributes": [
+    {
+      "resource": "module.vpc2.aws_vpc.main",
+      "attribute": [
+        "id"
+      ]
+    },
+    {
+      "resource": "module.vpc.aws_vpc.main",
+      "attribute": [
+        "id"
+      ]
+    }
+  ],
+  "timestamp": "2024-05-22T10:08:02Z",
+  "applyable": false,
+  "complete": true,
+  "errored": false
+}
